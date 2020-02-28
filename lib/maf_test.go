@@ -19,6 +19,11 @@ func TestPlus3(t *testing.T) {
 	assert.Equal(t, 3, Plus(1, 2), "they should be equal")
 }
 
+func TestPlus10(t *testing.T) {
+	time.Sleep(1)
+	assert.Equal(t, 10, Plus(5, 5), "they should be equal")
+}
+
 func TestPlus100(t *testing.T) {
 	time.Sleep(1)
 	assert.Equal(t, 100, Plus(50, 50), "they should be equal")
