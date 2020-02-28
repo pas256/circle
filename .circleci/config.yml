@@ -13,7 +13,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - go-mod-{{ checksum "go.sum" }}
+            - go-mod-{{ checksum "go.sum" }}-{{ checksum "Makefile" }}
 
       - run:
           name: Check
@@ -28,7 +28,7 @@ jobs:
           command: make testci
 
       - save_cache:
-          key: go-mod-{{ checksum "go.sum" }}
+          key: go-mod-{{ checksum "go.sum" }}-{{ checksum "Makefile" }}
           paths:
             - "/go/pkg/mod"
             - "/go/bin"
