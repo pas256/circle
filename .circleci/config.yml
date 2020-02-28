@@ -31,6 +31,7 @@ jobs:
           key: go-mod-{{ checksum "go.sum" }}
           paths:
             - "/go/pkg/mod"
+            - "/go/bin"
 
       - store_artifacts: # upload test summary for display in Artifacts
           path: /tmp/test-results
