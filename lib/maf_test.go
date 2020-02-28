@@ -20,15 +20,15 @@ func TestPlus3(t *testing.T) {
 }
 
 func TestPlus10(t *testing.T) {
-	time.Sleep(1)
+	time.Sleep(1 * time.Second)
 	assert.Equal(t, 10, Plus(5, 5), "they should be equal")
 }
 
 func TestPlus100(t *testing.T) {
-	time.Sleep(1)
+	time.Sleep(1 * time.Second)
 	assert.Equal(t, 100, Plus(50, 50), "they should be equal")
 }
 func TestPlus100Slow(t *testing.T) {
-	time.Sleep(10)
+	time.Sleep(10 * time.Second)
 	assert.Equal(t, 100, Plus(50, 50), "they should be equal")
 }

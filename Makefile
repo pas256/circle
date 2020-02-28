@@ -23,5 +23,8 @@ testci:
 	mkdir -p ${TEST_DIR}
 	gotestsum --junitfile ${TEST_DIR}/gotestsum-report.xml -- ./...
 
-clean:
+testclean:
+	rm -rf ${TEST_DIR}
+
+clean: testclean
 	rm -f prog
