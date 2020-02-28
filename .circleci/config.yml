@@ -20,17 +20,17 @@ jobs:
           command: make check
 
       - run:
-        name: Build
-        command: make build
+          name: Build
+          command: make build
 
       - run:
           name: Test
           command: make test
 
       - save_cache:
-        key: go-mod-{{ checksum "go.sum" }}
-        paths:
-          - "/go/pkg/mod"
+          key: go-mod-{{ checksum "go.sum" }}
+          paths:
+            - "/go/pkg/mod"
 
       - store_artifacts: # upload test summary for display in Artifacts
           path: /tmp/test-results
