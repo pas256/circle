@@ -5,8 +5,8 @@ default: build
 deps:
 	# Dependencies for this makefile, not for the program itself. Those are
 	# handled by `go mod`
-	go get gotest.tools/gotestsum
-	go get golang.org/x/lint/golint
+	go get -u gotest.tools/gotestsum
+	go get -u golang.org/x/lint/golint
 
 build:
 	go build ./...
